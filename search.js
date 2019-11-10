@@ -3,7 +3,8 @@ var searchButton = document.getElementById("searchbar");
 searchButton.addEventListener("submit", function(e) {
     search(searchButton.children[0].value);});
 
-var baseurl = "https://cse.google.com/cse.js?cx=004242811897244611140:bzxxzocrzh2";
+var baseurl = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBfFuw883\
+eP1MzJ3YYRvHk4Jyc2fawoq9w&cx=011476052725253523431:1njrvmffpvs&q=";
 
 function search(searchTerm) {
     var res = document.getElementsByClassName("results")[0].innerHTML = "";
