@@ -51,27 +51,51 @@
                         <a href="geolocation.html" target="_self">Geolocation</a>
                     </div>
                 </li> 
+                <li class="navbar-nav dropdown">
+                        <a id="menu" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target"
+                            href="#">Search
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-target">
+                            <a href="search.html" target="_self">Google Api<br></a>
+                            <a href="fromfile.html" target="_self">From File<br></a>
+                        </div>
+                    </li> 
             </ul>  
             <a id="menu" href="developers.html">About</a>    
         </div>
     </nav>
 
-    <script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> This is the Geolocation page</h1>
+    <p>Click the button to get your coordinates.</p>
+    <button onclick="getLocation()">Try It</button>
+    <p id ="demo"></p>
+        <script>
         var x = document.getElementById("demo");
-        function getLocation() {
-            if (navigator.geolocation) {
+        function getLocation(){
+            if (navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
+            }else{
+                x.innerHTML="Geolocation is not supported by this browser.";;
             }
         }
-        function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
+        function showPosition(position){
+            x.innerHTML= "Latitude: " + position.coords.latitude +
+            "<br> Longitude: " + position.coords.longitude;
+
         }
-        document.getElementById("demo").style.color= "white";
-        document.getElementById("demo").innerHTML = txt;
-    </script>
+
+        </script>
+</body>
+</html>
 
 </body>
 </html>

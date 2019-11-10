@@ -162,3 +162,19 @@ fieldset {
 :-ms-input-placeholder {
   color: #888;
 }
+
+.results {
+  position: absolute;
+  top: 28%;
+  width: 80%;
+  left: 20%;
+  margin: auto;
+  text-align: left;
+}
+
+.save {
+  position: absolute;
+  width: 80%;
+  top: 17%;
+  left: 20%;
+}
